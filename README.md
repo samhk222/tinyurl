@@ -1,4 +1,4 @@
-# Pacote para facilitar cálculos financeiros
+# Package to shorten url with tinyurl (being autenticated or not)
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/samhk222/tinyurl.svg?style=flat-square)](https://packagist.org/packages/samhk222/tinyurl)
 [![Total Downloads](https://img.shields.io/packagist/dt/samhk222/tinyurl.svg?style=flat-square)](https://packagist.org/packages/samhk222/tinyurl)
