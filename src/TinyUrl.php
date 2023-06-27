@@ -35,7 +35,7 @@ class TinyUrl
     {
         $headers = [
             'accept' => 'application/json',
-            'Content-Type' => 'application/json'
+            'Content-Type' => 'application/json',
         ];
 
         if ($this->token != null) {
@@ -47,7 +47,7 @@ class TinyUrl
                 'headers' => $headers,
                 'json' => [
                     'url' => $url,
-                ]
+                ],
             ]);
 
             return json_decode($response->getBody()->getContents())->data->tiny_url;
@@ -80,7 +80,7 @@ class TinyUrl
 
         curl_close($curl);
 
-        if (!is_string($response)) {
+        if (! is_string($response)) {
             throw new Exception("Error shortening url ");
         }
 
