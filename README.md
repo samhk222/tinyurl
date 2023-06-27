@@ -1,41 +1,36 @@
 # Pacote para facilitar cálculos financeiros
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/samhk222/matematica-financeira.svg?style=flat-square)](https://packagist.org/packages/samhk222/matematica-financeira)
-[![Tests](https://img.shields.io/github/actions/workflow/status/samhk222/matematica-financeira/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/samhk222/matematica-financeira/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/samhk222/matematica-financeira.svg?style=flat-square)](https://packagist.org/packages/samhk222/matematica-financeira)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/samhk222/tinyurl.svg?style=flat-square)](https://packagist.org/packages/samhk222/tinyurl)
+[![Total Downloads](https://img.shields.io/packagist/dt/samhk222/tinyurl.svg?style=flat-square)](https://packagist.org/packages/samhk222/tinyurl)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/matematica-financeira.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/matematica-financeira)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+Shorten a url, beeing autenticated or not in tinyurl
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require samhk222/matematica-financeira
+composer require samhk222/tinyurl
 ```
 
 ## Usage
 
+Shortening url without beeing autenticated
+
 ```php
-$skeleton = new Samhk222\MatematicaFinanceira();
-echo $skeleton->echoPhrase('Hello, Samhk222!');
+$shortened = new Samhk222\TinyUrl\TinyUrl();
+echo $shortened->shorten('very long url');
 ```
 
-## Testing
+Shortening url beeing autenticated (you can get your token [here](https://tinyurl.com/app/settings/api)). Remember,
+never
+save your token in a repo or in the code, save it to a `.env` [file](https://github.com/vlucas/phpdotenv) or something
+similar to that
 
-```bash
-composer test
+```php
+$shortened = Samhk222\TinyUrl\TinyUrl::token("your token here");
+echo $shortened->shorten('very long url');
 ```
-
-## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
@@ -43,14 +38,9 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
 
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
 ## Credits
 
 - [Samuel Ferreira](https://github.com/samhk222)
-- [All Contributors](../../contributors)
 
 ## License
 

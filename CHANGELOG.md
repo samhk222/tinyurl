@@ -1,4 +1,10 @@
 # Changelog
 
-All notable changes to `matematica-financeira` will be documented in this file.
+# v0.0.2
+
+- Readme updated
+
+# v0.0.1
+
+- First release of the package
 
